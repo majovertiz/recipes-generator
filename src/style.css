@@ -16,7 +16,7 @@ h1 {
   font-weight: 800;
   font-size: 40px;
   line-height: 1.5;
-  color: white;
+  color: violet;
 }
 
 form {
@@ -27,7 +27,7 @@ form {
   margin-bottom: 30px;
 }
 a {
-  color: black;
+  color: violet;
 }
 .instructions {
   padding: 16px;
@@ -41,7 +41,7 @@ a {
 
 .submit-button {
   margin-left: 10px;
-  background-color: black;
+  background-color: violet;
   color: white;
   border: none;
   border-radius: 50px;
@@ -55,7 +55,7 @@ a {
   background-color: white;
   padding: 20px;
   line-height: 20px;
-  border-left: 5px solid black;
+  border-left: 5px solid violet;
   border-radius: 10px;
 }
 
