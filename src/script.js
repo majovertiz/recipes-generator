@@ -2,7 +2,7 @@ function displayRecipe(response) {
   new Typewriter("#recipe", {
     strings: response.data.answer,
     autoStart: true,
-    delay: 2,
+    delay: 20,
     cursor: "",
   });
 }
@@ -17,9 +17,9 @@ function generateRecipe(event) {
     "You are a healthy cooking expert and love to write short and delicious recipes.Your mission is to generate a recipe in basic HTML.  Make sure to follow the user instructions.";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  console.log("Generating ");
-  console.log(`Prompt:${prompt}`);
-  console.log(`Context:${context}`);
+  let recipeElement = document.querySelector("#recipe");
+  recipeElement.classList.remove("hidden");
+  recipeElement.innerHTML = `<div class="generating">⏳Generating the recipe ...</div>`;
 
   axios.get(apiUrl).then(displayRecipe);
 }
